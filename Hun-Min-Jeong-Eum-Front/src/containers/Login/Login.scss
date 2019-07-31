@@ -1,0 +1,94 @@
+@import url(https://cdn.rawgit.com/kattergil/NotoSerifKR-Web/76eb9ebf/stylesheet/NotoSerif-Web.css);
+
+::placeholder{
+    color: #cccccc;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+.Login{
+    display: inline-flex;
+    width: 100%;
+    height: 63em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../../images/Background/로그인배경사진.png');
+    background-size: cover;
+    &--body{
+        width: 800px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 500px;
+        &--title{
+            margin: 30px;
+            color: #A67360;
+            font-size: 3.5em;
+            font-family: 'Noto Serif KR', serif;
+            font-weight: bold;
+        }
+        &--inputs{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            &>input{
+                margin: 20px;
+                padding: 20px;
+                width: 13em;
+                height: 2em;
+                border-radius: 30px;
+                border: 0;
+                outline: 0;
+                font-family: 'Noto Serif KR', serif;
+                font-size: 2em;
+            }
+        }
+        &--buttons{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            &>button{
+                margin: 10px;
+                border-radius: 30px;
+                border: 0;
+                outline: 0;
+                width: 6em;
+                height: 1.8em;
+                color: #ffffff;
+                font-family: 'Noto Serif KR', serif;
+                font-size: 2em;
+            }
+            &--loginButton{
+                background-color: #30BFB1;
+                &:hover{
+                    background-color: rgb(44, 168, 156);
+                }
+                &:active{
+                    background-color: rgb(37, 139, 129);
+                    
+                }
+            }
+            &--signUpButton{
+                background-color: #1A80D9;
+                &:hover{
+                    background-color: rgb(22, 110, 187);
+                }
+                &:active{
+                    background-color: rgb(18, 93, 158);
+                }
+            }
+        }
+    }
+}
