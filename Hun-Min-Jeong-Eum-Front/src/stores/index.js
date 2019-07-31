@@ -3,7 +3,7 @@ import LoginStore from './Login/LoginStore';
 
 const stores = {
   ex: new ExStore(),
-  login: new LoginStore(),
+  login: new LoginStore()
 };
 
 export default stores;
