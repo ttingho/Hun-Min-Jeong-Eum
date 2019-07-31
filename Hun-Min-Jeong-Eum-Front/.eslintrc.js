@@ -20,10 +20,21 @@ module.exports = {
 		'import'
 	],
 	'rules': {
+		"react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "react/react-in-jsx-scope": 1,
 		'indent': [
 			'error',
 			2
 		],
+		"react/jsx-indent": [
+      "error",
+      2
+    ],
+    "react/jsx-indent-props": [
+      "error",
+      2
+    ],
 		'linebreak-style': [
 			'error',
 			'unix'
