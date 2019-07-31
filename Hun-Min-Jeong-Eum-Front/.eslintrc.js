@@ -23,7 +23,7 @@ module.exports = {
 	'rules': {
 		'indent': [
 			'error',
-			'tab'
+			'2'
 		],
 		'linebreak-style': [
 			'error',
@@ -47,6 +47,48 @@ module.exports = {
 			'warn'
 		],
 		'prefer-arrow-callback': [
+			'error'
+		],
+		'eqeqeq': [
+			'error'
+		],
+		'space-infix-ops': [
+			'error'
+		],
+		'comma-spacing': [
+			'error'
+		],
+		'brace-style': [
+			'error'
+		],
+		'curly': [
+			'error'
+		],
+		'no-multiple-empty-lines': [
+			'error'
+		],
+		'operator-linebreak': [
+			'error'
+		],
+		'block-spacing': [
+			'error'
+		],
+		'comma-dangle': [
+			'error'
+		],
+		'comma-style': [
+			'error'
+		],
+		'func-call-spacing': [
+			'error'
+		],
+		'new-parens': [
+			'error'
+		],
+		'space-before-function-paren': [
+			'error'
+		],
+		'keyword-spacing': [
 			'error'
 		]
 	}
