@@ -15,7 +15,7 @@ class LoginRepository {
         return false;
       });
     } catch (err) {
-      //console.log(err);
+      console.log(err);
     }
   }
 }

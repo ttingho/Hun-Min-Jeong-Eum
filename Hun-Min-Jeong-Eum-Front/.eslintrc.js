@@ -1,7 +1,9 @@
 module.exports = {
 	'env': {
-		'browser': true,
-		'es6': true
+		'node': true,
+		'commonjs': true,
+		"browser": true,
+		"es6": true
 	},
 	'extends': 'eslint:recommended',
 	'globals': {
@@ -47,6 +49,7 @@ module.exports = {
 			'error',
 			'always'
 		],
+		'no-console': 'off',
 		'no-var': [
 			'error'
 		],
