@@ -26,32 +26,34 @@ module.exports = {
     "react/jsx-uses-vars": 1,
     "react/react-in-jsx-scope": 1,
 		'indent': [
-			'error',
+			'warn',
 			2
 		],
 		"react/jsx-indent": [
-      "error",
+      "warn",
       2
     ],
     "react/jsx-indent-props": [
-      "error",
+      "warn",
       2
     ],
 		'linebreak-style': [
-			'error',
+			'warn',
 			'unix'
 		],
 		'quotes': [
-			'error',
+			'warn',
 			'single'
 		],
 		'semi': [
-			'error',
+			'warn',
 			'always'
 		],
-		'no-console': 'off',
+		'no-console': [
+			'warn'
+		],
 		'no-var': [
-			'error'
+			'warn'
 		],
 		'no-unused-vars': [
 			'warn'
@@ -60,49 +62,50 @@ module.exports = {
 			'warn'
 		],
 		'prefer-arrow-callback': [
-			'error'
+			'warn'
 		],
 		'eqeqeq': [
-			'error'
+			'warn'
 		],
 		'space-infix-ops': [
-			'error'
+			'warn'
 		],
 		'comma-spacing': [
-			'error'
+			'warn'
 		],
 		'brace-style': [
-			'error'
+			'warn'
 		],
 		'curly': [
-			'error'
+			'warn'
 		],
 		'no-multiple-empty-lines': [
-			'error'
+			'warn'
 		],
 		'operator-linebreak': [
-			'error'
+			'warn'
 		],
 		'block-spacing': [
-			'error'
+			'warn'
 		],
 		'comma-dangle': [
-			'error'
+			'warn'
 		],
 		'comma-style': [
-			'error'
+			'warn'
 		],
 		'func-call-spacing': [
-			'error'
+			'warn'
 		],
 		'new-parens': [
-			'error'
+			'warn'
 		],
 		'space-before-function-paren': [
-			'error'
+			'warn'
 		],
 		'keyword-spacing': [
-			'error'
+			'warn'
 		]
-	}
+	},
+	"parser": "babel-eslint"
 };
