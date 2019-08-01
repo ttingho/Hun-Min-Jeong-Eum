@@ -1,4 +1,4 @@
-import { autobind } from "core-decorators";
+import { autobind } from 'core-decorators';
 import { observable, action } from 'mobx';
 import LoginRepository from './LoginRepository';
 
