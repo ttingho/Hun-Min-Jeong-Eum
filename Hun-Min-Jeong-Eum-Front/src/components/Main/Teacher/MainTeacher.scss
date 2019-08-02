@@ -34,7 +34,7 @@ $main-color-5: #A67360;
     &-UserName {
       margin: auto;
       margin-top: 10%;
-      margin-bottom: 10%;
+      margin-bottom: 20%;
       color: white;
       font-weight: bold;
       font-size: 32pt;
@@ -53,27 +53,10 @@ $main-color-5: #A67360;
     }
     &-Made {
       margin: auto;
-      margin-top: 30%;
+      margin-top: 50%;
       color: white;
       font-weight: bold;
       font-size: 16pt;
-    }
-  }
-  &-Contents {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 2%;
-    &-Subject {
-      width: 90%;
-      height: 10%;
-      border-bottom: 8px solid $main-color-2;
-      font-size: 30pt;
-      font-weight: bold;
-      color: $main-color-2;
-      display: flex;
-      align-items: center;
     }
   }
 }
