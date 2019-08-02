@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import styles from './MainTeacher.scss';
 import classNames from 'classnames/bind';
 import profile from '../../../images/Icon/user.png';
-import MainContents from '../MainContents/SubjectContents';
+import SubjectContents from '../MainContents/SubjectContents';
 
 const cx = classNames.bind(styles);
 
@@ -17,7 +17,7 @@ const MainTeacher = () => {
           <span className={ cx('MainTeacher-Header-Button') }>로그아웃</span>
           <span className={ cx('MainTeacher-Header-Made') }>Made By 나랏말싸미</span>
         </div>
-        <MainContents />
+        <SubjectContents />
       </div>
     </Fragment>
   );
