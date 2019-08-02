@@ -14,8 +14,7 @@ class SignUpContainer extends Component {
       this.setState({
         isTeacher: true
       });
-    }
-    else if (e.target.name === 'student'){
+    } else if (e.target.name === 'student'){
       this.setState({
         isTeacher: false
       });
