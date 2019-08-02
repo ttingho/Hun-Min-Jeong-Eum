@@ -1,9 +1,9 @@
-import ExStore from './ExStore';
 import LoginStore from './Login/LoginStore';
+import MainContentsChangeStore from './MainContentsChangeStore/MainContentsChangeStore';
 
 const stores = {
-  ex: new ExStore(),
-  login: new LoginStore()
+  login: new LoginStore(),
+  MCCS: new MainContentsChangeStore()
 };
 
 export default stores;
