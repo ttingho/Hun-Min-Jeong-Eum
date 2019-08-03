@@ -8,8 +8,8 @@ class MainContentsChangeStore {
   }
 
   @action.bound
-  changeContents (contents) {
-    this.isContents = contents;
+  changeContents () {
+    this.isContents = !this.isContents;
   }
 }
 
