@@ -20,37 +20,236 @@
     letter-spacing: 10px;
   }
   &--body{
-    display: flex;
+    display: inherit;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     &--buttons{
+      display: flex;
+      width: 100%;
+      height: auto;
+      margin: auto;
+      margin-left: 67%;
+      position: relative;
+      z-index: 0;
       &>button{
         border: 0;
         outline: 0;
+        cursor: pointer;
       }
       &--teacherButton{
-        background: url('../../images/Icon/classroom.png') no-repeat;
+        background: url('../../images/Icon/classroom.png') no-repeat center;
         background-color: #30BFB1;
         border-radius: 10px;
-        width: 64px;
-        height: 64px;
+        width: 7em;
+        height: 5em;
+        padding: 0 20px;
       }
       &--studentButton{
-        background: url('../../images/Icon/student.png') no-repeat;
+        background: url('../../images/Icon/student.png') no-repeat center;
         background-color: #ABD948;
         border-radius: 10px;
-        width: 64px;
-        height: 64px;
+        width: 7em;
+        height: 5em;
+        margin-left: 20px;
+        padding: 0 20px;
       }
     }
     &--teacher{
-      width: 50%;
+      width: 65%;
+      height: 100%;
       border: 5px solid #30BFB1;
+      border-radius: 30px;
+      background-color: #ffffff;
+      padding: 10px;
+      display: inherit;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      &--title{
+        color: #30BFB1;
+        font-family: 'Noto Serif KR', serif;
+        font-size: 3em;
+        font-weight: bold;
+      }
+      &--inputElement{
+        width: 50em;
+        margin: 10px 0;
+        &>label{
+          display: inline-flex;
+          color: #A67360;
+          font-family: 'Noto Serif KR', serif;
+          font-size: 2em;
+          font-weight: bold;
+          width: 9em;
+        }
+        &>input{
+          margin: 0px 50px;
+          width: 200px;
+          height: 50px;
+          border: 0;
+          border-bottom: 3px solid #30BFB1;
+          outline: 0;
+        }
+        &>input::placeholder{
+          font-size: 2em;
+        }
+        &>button{
+          background-color: #30BFB1;
+          color: #ffffff;
+          border: 0;
+          outline: 0;
+          width: 5em;
+          margin: 0;
+          margin-left: 1.5em;
+          padding: 2px 5px;
+          font-family: 'Noto Serif KR', serif;
+          font-size: 2em;
+          border-radius: 30px;
+          cursor: pointer;
+          &:hover{
+            background-color: rgb(44, 168, 156);
+          }
+          &:active{
+            background-color: rgb(37, 139, 129);
+          }
+        }
+      }
+      &--buttons{
+        &>button{
+          background-color: #30BFB1;
+          color: #ffffff;
+          border: 0;
+          outline: 0;
+          width: 5em;
+          height: auto;
+          margin: 0 20px;
+          font-family: 'Noto Serif KR', serif;
+          font-size: 2em;
+          border-radius: 30px;
+          padding: 2px 5px;
+          cursor: pointer;
+          &:hover{
+            background-color: rgb(44, 168, 156);
+          }
+          &:active{
+            background-color: rgb(37, 139, 129);
+          }
+        }
+        margin: 20px;
+        margin-top: 30px;
+      }
     }
     &--student{
-      width: 50%;
+      width: 65%;
+      height: 100%;
       border: 5px solid #ABD948;
+      border-radius: 30px;
+      background-color: #ffffff;
+      padding: 10px;
+      display: inherit;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      &--title{
+        color: #ABD948;
+        font-family: 'Noto Serif KR', serif;
+        font-size: 3em;
+        font-weight: bold;
+      }
+      &--inputElement{
+        width: 50em;
+        margin: 10px 0;
+        &>label{
+          display: inline-block;
+          color: #A67360;
+          font-family: 'Noto Serif KR', serif;
+          font-size: 2em;
+          font-weight: bold;
+          width: 8em;
+        }
+        &>input{
+          margin: 0px 50px;
+          width: 200px;
+          height: 50px;
+          border: 0;
+          border-bottom: 3px solid #ABD948;
+          outline: 0;
+        }
+        &>input::placeholder{
+          font-size: 2em;
+        }
+        &>button{
+          background-color: #ABD948;
+          color: #ffffff;
+          border: 0;
+          outline: 0;
+          margin-left: 2.5em;
+          padding: 2px 5px;
+          width: 5em;
+          height: auto;
+          font-family: 'Noto Serif KR', serif;
+          font-size: 2em;
+          border-radius: 30px;
+          cursor: pointer;
+          &:hover{
+            background-color: rgb(156, 197, 66);
+          }
+          &:active{
+            background-color: rgb(139, 177, 56);
+          }
+        }
+      }
+      &--numbers{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        &>label{
+          color: #A67360;
+          font-family: 'Noto Serif KR', serif;
+          font-size: 2em;
+          font-weight: bold;
+          &>input{
+            margin: 0px 50px;
+            width: 200px;
+            height: 50px;
+            border: 0;
+            border-bottom: 3px solid #ABD948;
+            outline: 0;
+          }
+          &>input::placeholder{
+            font-size: 2em;
+          }
+        }
+      }
+      &--buttons{
+        &>button{
+          background-color: #ABD948;
+          color: #ffffff;
+          border: 0;
+          outline: 0;
+          width: 5em;
+          height: auto;
+          margin: 0 20px;
+          font-family: 'Noto Serif KR', serif;
+          font-size: 2em;
+          border-radius: 30px;
+          padding: 2px 5px;
+          cursor: pointer;
+          &:hover{
+            background-color: rgb(156, 197, 66);
+          }
+          &:active{
+            background-color: rgb(139, 177, 56);
+          }
+        }
+        margin: 20px;
+        margin-top: 30px;
+      }
     }
   }
 }
