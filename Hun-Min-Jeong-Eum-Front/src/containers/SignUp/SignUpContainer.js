@@ -63,8 +63,7 @@ class SignUpContainer extends Component {
         this.setState({
           isEqualId: true
         });
-      }
-      else if (data === false){
+      } else if (data === false){
         alert('같은 아이디가 있어유!');
       }
     } else {
