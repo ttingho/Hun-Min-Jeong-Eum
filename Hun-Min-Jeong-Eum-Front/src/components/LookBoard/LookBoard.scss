@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-button{
+button[name=parentButton]{
   outline: 0;
   border: 0;
   background-color: #ABD948;
@@ -19,6 +19,10 @@ button[name=choosing]{
   margin-left: 3em;
   width: 3em;
   height: 3em;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .LookBoard{
@@ -26,6 +30,7 @@ button[name=choosing]{
   height: 100vh;
   display: flex;
   flex-direction: row;
+  
   &--content{
     width: 100%;
     display: flex;
@@ -51,18 +56,39 @@ button[name=choosing]{
       margin: 0;
       margin-top: 20em;
       background: url('../../images/Icon/undo.png') no-repeat center;
+      outline: 0;
+      border: 0;
+      background-color: #ABD948;
+      width: 5em;
+      height: 5em;
+      cursor: pointer;
+      border-radius: 5px;
     }
     &--saveButton{
       margin: 0;
       margin-top: 4em;
       background: url('../../images/Icon/save.png') no-repeat center;
+      outline: 0;
+      border: 0;
+      background-color: #ABD948;
+      width: 5em;
+      height: 5em;
+      cursor: pointer;
+      border-radius: 5px;
     }
     &--colorButtons{
       display: inherit;
       flex-direction: column;
       &--choosedColor{
+        outline: 0;
+        border: 0;
         border: 5px solid #ffffff;
         background-color: #000000;
+        width: 5em;
+        height: 5em;
+        cursor: pointer;
+        margin: 1em;
+        border-radius: 5px;
       }
       &--choosingButtons{
         display: inherit;
@@ -70,7 +96,7 @@ button[name=choosing]{
         &--black{
           background-color: #000000;
           &:active{
-            #choosed{
+            .choosedColor[name=choosed]{
               background-color: #000000;
             }
           }
@@ -78,7 +104,7 @@ button[name=choosing]{
         &--red{
           background-color: red;
           &:active{
-            #choosed{
+            .choosedColor[name=choosed]{
               background-color: red;
             }
           }
@@ -86,7 +112,7 @@ button[name=choosing]{
         &--blue{
           background-color: blue;
           &:active{
-            #choosed{
+            .choosedColor[name=choosed]{
               background-color: blue;
             }
           }
