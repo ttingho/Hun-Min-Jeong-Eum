@@ -30,7 +30,8 @@ class TeacherContainer extends Component {
         { Subject: '수학 필기', writeTime: '2019.07.27', classInfo: '2학년 1반' },
         { Subject: '수학 필기', writeTime: '2019.07.27', classInfo: '2학년 3반' },
         { Subject: '수학 필기', writeTime: '2019.07.26', classInfo: '2학년 4반' }
-      ]
+      ],
+      MainColor: true
     };
   }
   OnClickLogOut = () => {
@@ -49,7 +50,7 @@ class TeacherContainer extends Component {
             <span className={ cx('MainTeacher-Header-Made') }>Made By 나랏말싸미</span>
           </div>
           {
-            this.props.store.MCCS.isContents === true ? <SubjectContents SubjectData={ this.state.SubjectData } /> : <TakeNoteContents TakeNoteData={ this.state.TakeNoteData } />
+            this.props.store.MCCS.isContents === true ? <SubjectContents SubjectData={ this.state.SubjectData } MainColor={ this.state.MainColor } /> : <TakeNoteContents TakeNoteData={ this.state.TakeNoteData } MainColor={ this.state.MainColor } />
           }
         </div>
       </Fragment>

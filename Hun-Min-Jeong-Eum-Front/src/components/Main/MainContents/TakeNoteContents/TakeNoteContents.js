@@ -8,7 +8,6 @@ import { observer, inject } from 'mobx-react';
 import { action } from 'mobx';
 
 const cx = classNames.bind(styles);
-const arrowColor = '#30BFB1';
 
 @inject('store')
 @observer
@@ -18,12 +17,14 @@ class TakeNoteContents extends Component {
     this.props.store.MCCS.changeContents();
   };
   render () {
-    const TakeNoteList = this.props.TakeNoteData;
+    const { TakeNoteData, MainMember } = this.props;
+    const TakeNoteList = TakeNoteData;
+    const arrowColor = MainMember === true ? '#30BFB1' : '#ABD948';
     return (
       <Fragment>
         <div className={ cx('TakeNoteContents') }>
           <div className={ cx('TakeNoteContents-Content') }>
-            <div className={ cx('TakeNoteContents-Content-Subject') }>
+            <div className={ cx('TakeNoteContents-Content', { SubjectT: MainMember, SubjectS: !MainMember }) }>
               수학 필기
               <IconContext.Provider value={{ color: arrowColor, size: '3rem', className: 'arrowButton' }}>
                 <FaArrowAltCircleLeft onClick={ this.ClickContents } />

@@ -18,23 +18,34 @@ $main-color-5: #A67360;
   &-Content {
     display: flex;
     justify-content: center;
-    &-Subject {
-      width: 95%;
-      height: 10%;
-      padding-bottom: 0.5%;
-      padding-left: 1%;
-      padding-right: 1%;
-      border-bottom: 8px solid $main-color-2;
-      font-size: 32pt;
-      font-weight: bold;
-      color: $main-color-2;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .arrowButton {
-        cursor: pointer;
-      }
-    }
+  }
+  .SubjectT {
+    width: 95%;
+    height: 10%;
+    padding-bottom: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-bottom: 8px solid $main-color-2;
+    font-size: 32pt;
+    font-weight: bold;
+    color: $main-color-2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .SubjectS {
+    width: 95%;
+    height: 10%;
+    padding-bottom: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-bottom: 8px solid $main-color-3;
+    font-size: 32pt;
+    font-weight: bold;
+    color: $main-color-3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   &-TakeNoteCardList {
     width: 100%;
@@ -44,5 +55,8 @@ $main-color-5: #A67360;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+  }
+  .arrowButton {
+    cursor: pointer;
   }
 }
