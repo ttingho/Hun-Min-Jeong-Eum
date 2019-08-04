@@ -46,15 +46,19 @@
       &-Color {
         display: inline-flex;
         margin-left: 20px;
+        align-items: center;
 
         &-current {
-          cursor: pointer;
-          width: 48px;
-          height: 48px;
-          border: solid 3.5px white;
-          border-radius: 10px 10px 10px 10px;
-          background-color: black;
-          margin: 10px 5px;
+          
+          &-detail {
+            cursor: pointer;
+            width: 48px;
+            height: 48px; 
+            border: solid 3.5px white;
+            border-radius: 10px 10px 10px 10px;
+            background-color: black;
+            margin: 5px 5px;
+          }
         }
         &-black {
           cursor: pointer;
@@ -62,7 +66,7 @@
           height: 40px; 
           border-radius: 10px 10px 10px 10px;
           background-color: black;
-          margin: 10px 3px;
+          margin: 0px 3px;
         }
         &-red {
           cursor: pointer;
@@ -70,7 +74,7 @@
           height: 40px; 
           border-radius: 10px 10px 10px 10px;
           background-color: red;
-          margin: 10px 3px;
+          margin: 0px 3px;
         }
         &-blue {
           cursor: pointer;
@@ -78,7 +82,7 @@
           height: 40px; 
           border-radius: 10px 10px 10px 10px;
           background-color: blue;
-          margin: 10px 3px;
+          margin: 0px 3px;
         }
       }
     }
@@ -110,11 +114,20 @@
         margin: 70px 30px;
       }
       &-memo {
-        border-left: #30BFB1 solid 3px;
+        border-left: #30BFB1 solid 5px;
         width: 40%;
         height: 90%;
         margin: 40px 15px;
         padding: 30px 30px;
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        display: table;
+        
+        &-inner {
+          display: table-cell;
+          vertical-align: middle;
+        }
       }
     }
   }

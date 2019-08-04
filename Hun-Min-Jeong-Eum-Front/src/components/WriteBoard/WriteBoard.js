@@ -21,7 +21,9 @@ class WriteBoard extends Component {
             <img className="WriteBoard-header-tools-highlight" src={highlight} alt=""/>
             <img className="WriteBoard-header-tools-eraser" src={eraser} alt=""/>
             <div className="WriteBoard-header-tools-Color">
-              <div className="WriteBoard-header-tools-Color-current"></div>
+              <div className="WriteBoard-header-tools-Color-current">
+                <div className="WriteBoard-header-tools-Color-current-detail"></div>
+              </div>
               <div className="WriteBoard-header-tools-Color-black"></div>
               <div className="WriteBoard-header-tools-Color-red"></div>
               <div className="WriteBoard-header-tools-Color-blue"></div>
@@ -33,15 +35,15 @@ class WriteBoard extends Component {
           <div className="WriteBoard-contents-box">
             <img className="WriteBoard-contents-box-textbook" src={bringExample} alt=""/>
             <div className="WriteBoard-contents-box-memo">
-              <pre>
-                여기서의 while은
-                시간을 나타내느
-                접속사로 ~할 때
-                라는 의미를 가진다.
-
-                heritage의 뜻은
-                세습, 재산, 상속
-                등이 있다.
+              <pre className="WriteBoard-contents-box-memo-inner">
+                <p>여기서 while은</p>
+                <p>시간을 나타내는</p>
+                <p>접속사로 ~ 할 때</p>
+                <p>라는 의미를 가진다.</p>
+                <br/>
+                <p>heritage의 뜻은</p>
+                <p>세습, 재산, 상속</p>
+                <p>등이 있다.</p>
               </pre>
             </div>
           </div>
