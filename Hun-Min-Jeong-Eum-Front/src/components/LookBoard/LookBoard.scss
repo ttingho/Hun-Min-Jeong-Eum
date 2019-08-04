@@ -1,0 +1,97 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  outline: 0;
+  border: 0;
+  background-color: #ABD948;
+  width: 5em;
+  height: 5em;
+  cursor: pointer;
+  margin: 1em;
+  border-radius: 5px;
+}
+
+button[name=choosing]{
+  margin: 0.5em 0;
+  margin-left: 3em;
+  width: 3em;
+  height: 3em;
+}
+
+.LookBoard{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  &--content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &--equipBar{
+    width: 6%;
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #ABD948;
+    align-items: center;
+    &--pencil{
+      background: url('../../images/Icon/pen.png') no-repeat center;
+    }
+    &--highlighter{
+      background: url('../../images/Icon/highlight.png') no-repeat center;
+    }
+    &--eraser{
+      background: url('../../images/Icon/eraser.png') no-repeat center;
+    }
+    &--goBack{
+      margin: 0;
+      margin-top: 20em;
+      background: url('../../images/Icon/undo.png') no-repeat center;
+    }
+    &--saveButton{
+      margin: 0;
+      margin-top: 4em;
+      background: url('../../images/Icon/save.png') no-repeat center;
+    }
+    &--colorButtons{
+      display: inherit;
+      flex-direction: column;
+      &--choosedColor{
+        border: 5px solid #ffffff;
+        background-color: #000000;
+      }
+      &--choosingButtons{
+        display: inherit;
+        flex-direction: column;
+        &--black{
+          background-color: #000000;
+          &:active{
+            #choosed{
+              background-color: #000000;
+            }
+          }
+        }
+        &--red{
+          background-color: red;
+          &:active{
+            #choosed{
+              background-color: red;
+            }
+          }
+        }
+        &--blue{
+          background-color: blue;
+          &:active{
+            #choosed{
+              background-color: blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

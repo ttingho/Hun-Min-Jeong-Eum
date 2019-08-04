@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LookBoard from 'components/LookBoard/LookBoard';
+import { withRouter } from 'react-router-dom';
 
 class LookBoardContainer extends Component {
   constructor (props){
@@ -7,14 +8,20 @@ class LookBoardContainer extends Component {
     this.state = {};
   }
 
+  goingBack = () => {
+    this.props.history.push('');
+  }
+
   render () {
     return (
       <div>
-        <LookBoard>
+        <LookBoard
+          goingBack={this.goingBack}
+        >
         </LookBoard>
       </div>
     );
   }
 }
 
-export default LookBoardContainer;
+export default withRouter(LookBoardContainer);
