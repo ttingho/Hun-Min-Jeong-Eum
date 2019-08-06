@@ -1,8 +1,17 @@
 import React from 'react';
 import './LookBoard.scss';
 import CanvasDraw from 'react-canvas-draw';
+import TakeNoteImg from '../../images/Background/TakeNote.png';
+import Swal from 'sweetalert2';
 
 const LookBoard = ({ goingBack, changingColor, colorType }) => {
+  const onClickSave = () => {
+    Swal.fire({
+      type: 'success',
+      title: '저장 성공',
+      text: '저장에 성공했습니다.'
+    });
+  };
   return (
     <div className="LookBoard">
       <div className="LookBoard--content">
@@ -14,10 +23,10 @@ const LookBoard = ({ goingBack, changingColor, colorType }) => {
           catenaryColor="#ff0000"
           gridColor="#ffffff"
           hideGrid={true}
-          canvasWidth={1812}
-          canvasHeight={1007}
+          canvasWidth={1700}
+          canvasHeight={1000}
           disabled={false}
-          imgSrc="https://cdnweb01.wikitree.co.kr/webdata/editor/201509/25/img_20150925174425_85b00840.jpg"
+          imgSrc={ TakeNoteImg }
           saveData={null}
           immediateLoading={false}
           // {
@@ -56,7 +65,7 @@ const LookBoard = ({ goingBack, changingColor, colorType }) => {
           </div>
         </div>
         <button className="LookBoard--equipBar--goBack" onClick={goingBack} ></button>
-        <button className="LookBoard--equipBar--saveButton"></button>
+        <button className="LookBoard--equipBar--saveButton" onClick={onClickSave}></button>
       </div>
     </div>
   );

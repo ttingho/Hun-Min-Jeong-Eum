@@ -3,6 +3,7 @@ import styles from './TakeNoteCard.scss';
 import classNames from 'classnames/bind';
 import { observer, inject } from 'mobx-react';
 import { action } from 'mobx';
+import { withRouter } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -15,7 +16,7 @@ class TakeNoteCard extends Component {
   // }
   @action
   ClickContents = () => {
-    
+    this.props.history.push('/LookBoard');
   };
   render () {
     return (
@@ -30,4 +31,4 @@ class TakeNoteCard extends Component {
   }
 }
 
-export default TakeNoteCard;
+export default withRouter(TakeNoteCard);

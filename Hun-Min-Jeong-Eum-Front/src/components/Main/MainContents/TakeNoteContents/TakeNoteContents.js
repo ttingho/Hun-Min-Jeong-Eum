@@ -25,7 +25,7 @@ class TakeNoteContents extends Component {
         <div className={ cx('TakeNoteContents') }>
           <div className={ cx('TakeNoteContents-Content') }>
             <div className={ cx('TakeNoteContents-Content', { SubjectT: MainMember, SubjectS: !MainMember }) }>
-              수학 필기
+              과학 필기
               <IconContext.Provider value={{ color: arrowColor, size: '3rem', className: 'arrowButton' }}>
                 <FaArrowAltCircleLeft onClick={ this.ClickContents } />
               </IconContext.Provider>

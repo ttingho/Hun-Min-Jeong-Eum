@@ -24,12 +24,12 @@ class TeacherContainer extends Component {
         { Subject: '미술' }
       ],
       TakeNoteData: [
-        { Subject: '수학 필기', writeTime: '2019.07.30', classInfo: '2학년 2반' },
-        { Subject: '수학 필기', writeTime: '2019.07.29', classInfo: '2학년 5반' },
-        { Subject: '수학 필기', writeTime: '2019.07.29', classInfo: '2학년 1반' },
-        { Subject: '수학 필기', writeTime: '2019.07.27', classInfo: '2학년 1반' },
-        { Subject: '수학 필기', writeTime: '2019.07.27', classInfo: '2학년 3반' },
-        { Subject: '수학 필기', writeTime: '2019.07.26', classInfo: '2학년 4반' }
+        { Subject: '과학 필기', writeTime: '2019.07.30', classInfo: '2학년 2반' },
+        { Subject: '과학 필기', writeTime: '2019.07.29', classInfo: '2학년 5반' },
+        { Subject: '과학 필기', writeTime: '2019.07.29', classInfo: '2학년 1반' },
+        { Subject: '과학 필기', writeTime: '2019.07.27', classInfo: '2학년 1반' },
+        { Subject: '과학 필기', writeTime: '2019.07.27', classInfo: '2학년 3반' },
+        { Subject: '과학 필기', writeTime: '2019.07.26', classInfo: '2학년 4반' }
       ],
       MainMember: true
     };

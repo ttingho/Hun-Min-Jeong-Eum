@@ -6,6 +6,7 @@ import { MdClose, MdPhotoSizeSelectActual, MdBrush, MdFileDownload, MdUndo } fro
 import CanvasDraw from 'react-canvas-draw';
 // import {SketchField, Tools} from 'react-sketch';
 import { withRouter } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const cx = classNames.bind(style);
 
@@ -28,7 +29,18 @@ class WriteBoard extends Component {
   onClickMainPage = () => {
     this.props.history.push('/');
   }
+
+  sendingMessage = () => {
+    Swal.fire({
+      type: 'success',
+      title: '성공',
+      text: '저장에 성공했습니다.'
+
+    })
+  }
+
   render () {
+    console.log(this.state.BackImg);
     return (
       <Fragment>
         <div className={ cx('WriteBoard') }>
@@ -40,9 +52,7 @@ class WriteBoard extends Component {
               <MdPhotoSizeSelectActual />
             </IconContext.Provider>
             <IconContext.Provider value={{ color: 'white', size: '3rem', className: 'MdButton' }}>
-              <MdUndo onClick={() => {
-                this.saveableCanvas.undo();
-              }} />
+              <MdUndo />
             </IconContext.Provider>
             <div className={ cx('draw') }>
               <IconContext.Provider value={{ color: this.state.colorPick, size: '3rem', className: 'MdButton' }}>
@@ -57,7 +67,7 @@ class WriteBoard extends Component {
               </div>
             </div>
             <IconContext.Provider value={{ color: 'white', size: '3rem', className: 'MdButton' }}>
-              <MdFileDownload />
+              <MdFileDownload onClick={ this.sendingMessage } />
             </IconContext.Provider>
           </div>
           <div className={ cx('WriteBoard-Contents') }>
