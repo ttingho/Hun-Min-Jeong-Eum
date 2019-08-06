@@ -30,7 +30,7 @@ class LoginContainer extends Component {
           type: 'success',
           confirmButtonText: 'Cool'
         });
-        console.log(await login.getUserData());
+        // await login.getUserData();
         this.props.history.push('/');
       } else if (login.isSuccess === false){
         Swal.fire({
@@ -43,7 +43,7 @@ class LoginContainer extends Component {
     } else {
       Swal.fire({
         title: 'Error',
-        text: 'ID와 PW를 입력해주세요!',
+        text: '오류가 발생했어요.',
         type: 'error',
         confirmButtonText: 'Cool'
       });
