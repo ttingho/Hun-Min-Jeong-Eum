@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { inject } from 'mobx-react';
 import Login from 'components/Login/Login';
+import Swal from 'sweetalert2';
 
 @inject('store')
 class LoginContainer extends Component {
@@ -20,13 +21,31 @@ class LoginContainer extends Component {
   doingLogin = async () => {
     const login = this.props.store.login;
     const { id, pw } = this.state;
-    console.log(id);
-    console.log(pw);
     if (id || pw){
-      const didLogin = await login.checkIdentity(id, pw);
-      console.log(didLogin);
+      await login.checkIdentity(id, pw);
+      if (login.isSuccess === true){
+        Swal.fire({
+          title: '로그인 성공',
+          text: 'Success',
+          type: 'success',
+          confirmButtonText: 'Cool'
+        });
+        this.props.history.push('/');
+      } else if (login.isSuccess === false){
+        Swal.fire({
+          title: '로그인 실패',
+          text: 'ID나 PW가 틀려요.',
+          type: 'error',
+          confirmButtonText: 'Cool'
+        });
+      }
     } else {
-      alert('아이디와 비밀번호를 입력해주세요!');
+      Swal.fire({
+        title: 'Error',
+        text: 'ID와 PW를 입력해주세요!',
+        type: 'error',
+        confirmButtonText: 'Cool'
+      });
     }
   }
 

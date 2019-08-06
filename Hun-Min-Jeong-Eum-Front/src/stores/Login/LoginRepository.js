@@ -4,18 +4,23 @@ import { SERVER } from '../../config/config.json';
 class LoginRepository {
   async checkIdentity (id, pw) {
     try {
-      await axios.post(`${SERVER}`, {
-        id: id,
-        pw: pw
+      return await axios.post(`${SERVER}/api/login/`, {
+        user_id: id,
+        password: pw
       }).then(res => {
-        localStorage.setItem('token', res);
-        return true;
-      }).error(err => {
-        localStorage.removeItem('token');
-        return false;
+        console.log(res.status);
+        if (res.status === 200){
+          localStorage.setItem('token', res.data.token);
+          return true;
+        } else {
+          localStorage.removeItem('token');
+          return false;
+        }
       });
     } catch (err) {
-      console.log(err);
+      console.error(err);
+      localStorage.removeItem('token');
+      return false;
     }
   }
 }
