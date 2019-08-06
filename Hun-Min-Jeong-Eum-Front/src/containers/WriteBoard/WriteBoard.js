@@ -3,7 +3,8 @@ import style from './WriteBoard.scss';
 import classNames from 'classnames/bind';
 import { IconContext } from 'react-icons';
 import { MdClose, MdPhotoSizeSelectActual, MdBrush, MdFileDownload, MdUndo } from 'react-icons/md';
-import CanvasDraw from 'react-canvas-draw';
+// import CanvasDraw from 'react-canvas-draw';
+import {SketchField, Tools} from 'react-sketch';
 import { withRouter } from 'react-router-dom';
 
 const cx = classNames.bind(style);
@@ -60,7 +61,7 @@ class WriteBoard extends Component {
             </IconContext.Provider>
           </div>
           <div className={ cx('WriteBoard-Contents') }>
-            <CanvasDraw
+            {/* <CanvasDraw
               brushRadius={ 5 }
               brushColor={ this.state.colorPick }
               catenaryColor={ this.state.colorPick }
@@ -69,6 +70,14 @@ class WriteBoard extends Component {
               hideGrid={ true }
               imgSrc={ this.state.BackImg }
               ref={canvasDraw => (this.loadableCanvas = canvasDraw)}
+            /> */}
+            <SketchField
+              width={ 1900 }
+              height={ 850 }
+              tool={ Tools.Pencil }
+              lineColor={ this.state.colorPick }
+              lineWidth={ 5 }
+              imageFormat={ this.state.BackImg }
             />
           </div>
         </div>
