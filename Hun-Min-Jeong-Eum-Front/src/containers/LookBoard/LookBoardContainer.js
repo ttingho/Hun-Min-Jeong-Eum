@@ -20,7 +20,7 @@ class LookBoardContainer extends Component {
     this.setState({
       whatColor: e.target.id
     });
-    console.log("스테이트", this.state.whatColor);
+    console.log('스테이트', this.state.whatColor);
   }
 
   render () {
