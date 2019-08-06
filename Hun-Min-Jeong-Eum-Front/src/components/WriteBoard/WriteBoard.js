@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './WriteBoard.scss';
-import cancle from "../../images/Icon/cancle.png";
-import bring from "../../images/Icon/bring.png";
-import pen from "../../images/Icon/pen.png";
-import highlight from "../../images/Icon/highlight.png";
-import eraser from "../../images/Icon/eraser.png";
-import save from "../../images/Icon/save.png";
-import bringExample from "../../images/Icon/bringExample.png";
+import cancle from '../../images/Icon/cancle.png';
+import bring from '../../images/Icon/bring.png';
+import pen from '../../images/Icon/pen.png';
+import highlight from '../../images/Icon/highlight.png';
+import eraser from '../../images/Icon/eraser.png';
+import save from '../../images/Icon/save.png';
+import bringExample from '../../images/Icon/bringExample.png';
 
 
 class WriteBoard extends Component {
