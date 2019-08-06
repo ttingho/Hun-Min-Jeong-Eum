@@ -30,6 +30,7 @@ class LoginContainer extends Component {
           type: 'success',
           confirmButtonText: 'Cool'
         });
+        console.log(await login.getUserData());
         this.props.history.push('/');
       } else if (login.isSuccess === false){
         Swal.fire({
