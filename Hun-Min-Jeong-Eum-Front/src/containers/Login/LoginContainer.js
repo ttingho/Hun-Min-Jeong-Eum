@@ -23,7 +23,8 @@ class LoginContainer extends Component {
     console.log(id);
     console.log(pw);
     if (id || pw){
-      await login.checkIdentity(id, pw);
+      const didLogin = await login.checkIdentity(id, pw);
+      console.log(didLogin);
     } else{
       alert('아이디와 비밀번호를 입력해주세요!');
     }
