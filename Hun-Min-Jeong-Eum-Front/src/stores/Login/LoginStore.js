@@ -22,6 +22,14 @@ class LoginStore {
       console.log(err);
     }
   }
+
+  @action async getUserData () {
+    try {
+      await LoginRepository.getUserData();
+    } catch (err) {
+      console.error(err);
+    }
+  }
 }
 
 export default LoginStore;
