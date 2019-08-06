@@ -11,9 +11,9 @@ class SignUpStore {
     }
   }
 
-  async doingSingUpStudent (id, name, pw, school, classNumber, number){
+  async doingSingUpStudent (id, name, pw, school, classNumber, number, grade){
     try {
-      await SignUpRepository.doingSingUpStudent(id, name, pw, school, classNumber, number);
+      await SignUpRepository.doingSingUpStudent(id, name, pw, school, classNumber, number, grade);
     } catch (err) {
       console.log(err);
     }
