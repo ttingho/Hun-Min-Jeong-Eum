@@ -69,11 +69,8 @@ const SignUp = ({ isTeacher, changeType, checkOverlap, sendTeacherIdentity, send
                   <label>학교</label>
                   <input type="text" name="school" placeholder="학교" onChange={(e) => handleChange(e)}/>
                 </div>
-                <div className="SignUp--body--student--inputElement">
-                  <label>학년</label>
-                  <input type="text" name="grade" placeholder="학년" onChange={(e) => handleChange(e)} />
-                </div>
                 <div className="SignUp--body--student--numbers">
+                  <label>학년<input type="text" name="grade" placeholder="학년" onChange={(e) => handleChange(e)} /></label>
                   <label>반<input type="text" name="classNumber" placeholder="반" onChange={(e) => handleChange(e)}/></label>
                   <label>번호<input type="text" name="number" placeholder="번호" onChange={(e) => handleChange(e)}/></label>
                 </div>

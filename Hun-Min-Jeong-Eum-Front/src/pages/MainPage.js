@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react';
-import TeacherContainer from '../containers/Main/Teacher';
-// import StudentContainer from '../containers/Main/Student';
+import MainPageContainer from '../containers/Main/MainPageContainer';
 
 const MainPage = () => {
   return (
     <Fragment>
-      <TeacherContainer />
+      <MainPageContainer />
     </Fragment>
   );
 };

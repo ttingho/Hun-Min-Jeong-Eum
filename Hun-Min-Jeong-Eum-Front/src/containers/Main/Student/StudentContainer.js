@@ -39,18 +39,20 @@ class StudentContainer extends Component {
     this.props.history.push('/login');
   }
   render () {
+    const { MCCS, user } = this.props.store;
+    console.log(user.userData);
     return (
       <Fragment>
         <div className={ cx('MainStudent') }>
           <div className={ cx('MainStudent-Header') }>
             <img className={ cx('MainStudent-Header-ProfileImg') } src={ profile } alt='profile' />
-            <span className={ cx('MainStudent-Header-UserName') }>추명호 학생</span>
-            <span className={ cx('MainStudent-Header-ClassInfo') }>2학년 2반 19번</span>
+            <span className={ cx('MainStudent-Header-UserName') }>{ user.userData.data.name } 학생</span>
+            <span className={ cx('MainStudent-Header-ClassInfo') }>{ user.userData.data.school_grade }학년 { user.userData.data.school_class }반 { user.userData.data.school_num }번호</span>
             <span className={ cx('MainStudent-Header-Button') } onClick={ this.OnClickLogOut }>로그아웃</span>
             <span className={ cx('MainStudent-Header-Made') }>Made By 나랏말싸미</span>
           </div>
           {
-            this.props.store.MCCS.isContents === true ? <SubjectContents SubjectData={ this.state.SubjectData } MainMember={ this.state.MainMember } /> : <TakeNoteContents TakeNoteData={ this.state.TakeNoteData } MainMember={this.state.MainMember } />
+            MCCS.isContents === true ? <SubjectContents SubjectData={ this.state.SubjectData } MainMember={ this.state.MainMember } /> : <TakeNoteContents TakeNoteData={ this.state.TakeNoteData } MainMember={this.state.MainMember } />
           }
         </div>
       </Fragment>

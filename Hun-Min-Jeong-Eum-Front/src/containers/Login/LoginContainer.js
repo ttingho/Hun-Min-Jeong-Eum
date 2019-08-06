@@ -19,25 +19,25 @@ class LoginContainer extends Component {
   }
 
   doingLogin = async () => {
-    const login = this.props.store.login;
+    const { login, user } = this.props.store;
     const { id, pw } = this.state;
     if (id || pw){
       await login.checkIdentity(id, pw);
       if (login.isSuccess === true){
-        Swal.fire({
+        await Swal.fire({
           title: '로그인 성공',
           text: 'Success',
           type: 'success',
-          confirmButtonText: 'Cool'
+          confirmButtonText: '확인'
         });
-        // await login.getUserData();
+        await user.getUser();
         this.props.history.push('/');
       } else if (login.isSuccess === false){
         Swal.fire({
           title: '로그인 실패',
           text: 'ID나 PW가 틀려요.',
           type: 'error',
-          confirmButtonText: 'Cool'
+          confirmButtonText: '확인'
         });
       }
     } else {
@@ -45,7 +45,7 @@ class LoginContainer extends Component {
         title: 'Error',
         text: '오류가 발생했어요.',
         type: 'error',
-        confirmButtonText: 'Cool'
+        confirmButtonText: '확인'
       });
     }
   }
