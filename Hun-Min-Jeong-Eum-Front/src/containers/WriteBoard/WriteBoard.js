@@ -3,8 +3,8 @@ import style from './WriteBoard.scss';
 import classNames from 'classnames/bind';
 import { IconContext } from 'react-icons';
 import { MdClose, MdPhotoSizeSelectActual, MdBrush, MdFileDownload, MdUndo } from 'react-icons/md';
-// import CanvasDraw from 'react-canvas-draw';
-import {SketchField, Tools} from 'react-sketch';
+import CanvasDraw from 'react-canvas-draw';
+// import {SketchField, Tools} from 'react-sketch';
 import { withRouter } from 'react-router-dom';
 
 const cx = classNames.bind(style);
