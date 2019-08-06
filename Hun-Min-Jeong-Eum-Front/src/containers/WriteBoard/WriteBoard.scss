@@ -1,134 +1,95 @@
+@import 'utils';
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:200,300,400,500,600,700,900&display=swap&subset=korean');
+
+$main-color-1: #1A80D9;
+$main-color-2: #30BFB1;
+$main-color-3: #ABD948;
+$main-color-4: #F2E750;
+$main-color-5: #A67360;
+
+* {
+  font-family: 'Noto Serif KR', serif;
+}
+
 .WriteBoard {
   width: 100vw;
   height: 100vh;
-
-  &-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &-Header {
     width: 100%;
     height: 7%;
-    background-color: #30BFB1;
+    background: $main-color-2;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-
-    &-cancle {
+    align-items: center;
+    padding: 10px;
+    .MdButton {
       cursor: pointer;
-      width: 44px;
-      height: 44px;
-      margin: 10px 10px;
     }
-
-    &-bring {
-      cursor: pointer;
-      width: 44px;
-      height: 44px;
-      margin: 10px 5px;
-    }
-
-    &-tools {
-
-      &-pen {
-        cursor: pointer;
-        width: 44px;
-        height: 44px;
-        margin: 10px 5px;
-      }
-      &-highlight {
-        cursor: pointer;
-        width: 44px;
-        height: 44px;
-        margin: 10px 5px;
-      }
-      &-eraser {
-        cursor: pointer;
-        width: 44px;
-        height: 44px;
-        margin: 10px 5px;
-      }
-      &-Color {
-        display: inline-flex;
-        margin-left: 20px;
-        align-items: center;
-
-        &-current {
-
-          &-detail {
-            cursor: pointer;
-            width: 48px;
-            height: 48px; 
-            border: solid 3.5px white;
-            border-radius: 10px 10px 10px 10px;
-            background-color: black;
-            margin: 5px 5px;
-          }
-        }
-        &-black {
+    .draw {
+      width: 15%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      .ColorPicker {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+        input {
+          border: 0;
+          outline: none;
+          margin: auto;
           cursor: pointer;
-          width: 40px;
-          height: 40px; 
-          border-radius: 10px 10px 10px 10px;
-          background-color: black;
-          margin: 0px 3px;
         }
-        &-red {
-          cursor: pointer;
-          width: 40px;
-          height: 40px; 
-          border-radius: 10px 10px 10px 10px;
-          background-color: red;
-          margin: 0px 3px;
+        .color1 {
+          width: 30px;
+          height: 30px;
+          background-color: #000000;
+          border-radius: 15px;
+          color: #000000
         }
-        &-blue {
-          cursor: pointer;
-          width: 40px;
-          height: 40px; 
-          border-radius: 10px 10px 10px 10px;
-          background-color: blue;
-          margin: 0px 3px;
+        .color2 {
+          width: 30px;
+          height: 30px;
+          background-color: #FF0000;
+          border-radius: 15px;
+          color: #FF0000;
+        }
+        .color3 {
+          width: 30px;
+          height: 30px;
+          background-color: #5A5AFF;
+          border-radius: 15px;
+          color: #5A5AFF;
+        }
+        .color4 {
+          width: 30px;
+          height: 30px;
+          background-color: #FFC81E;
+          border-radius: 15px;
+          color: #FFC81E;
+        }
+        .color5 {
+          width: 30px;
+          height: 30px;
+          background-color: #FFFFFF;
+          border-radius: 15px;
+          color: #FFFFFF;
         }
       }
-    }
-    &-save {
-      cursor: pointer;
-      width: 44px;
-      height: 44px;
-      margin: 10px 10px;
     }
   }
-
-  &-contents {
+  &-Contents {
     width: 100%;
-    height: 92%;
+    height: 100%;
     display: flex;
-
-    &-box {
-      width: 95%;
-      height: 92%;
-      background-color: white;
-      border-radius: 40px 40px 40px 40px;
-      margin: auto;
-      display: inline-flex;
-      
-
-      &-textbook {
-        width: 70%;
-        height: 80%;
-        margin: 70px 30px;
-      }
-      &-memo {
-        border-left: #30BFB1 solid 5px;
-        width: 40%;
-        height: 90%;
-        margin: 40px 15px;
-        padding: 30px 30px;
-        text-align: center;
-        font-size: 2.5em;
-        font-weight: bold;
-        display: table;
-        
-        &-inner {
-          display: table-cell;
-          vertical-align: middle;
-        }
-      }
-    }
+    justify-content: center;
+    align-items: center;
   }
 }
