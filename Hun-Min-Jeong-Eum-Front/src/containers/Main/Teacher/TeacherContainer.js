@@ -38,6 +38,9 @@ class TeacherContainer extends Component {
     localStorage.removeItem('token');
     this.props.history.push('/login');
   }
+  OnClickWriteBoard = () => {
+    this.props.history.push('/WriteBoard');
+  }
   render () {
     return (
       <Fragment>
@@ -45,7 +48,7 @@ class TeacherContainer extends Component {
           <div className={ cx('MainTeacher-Header') }>
             <img className={ cx('MainTeacher-Header-ProfileImg') } src={ profile } alt='profile' />
             <span className={ cx('MainTeacher-Header-UserName') }>추명호 선생님</span>
-            <span className={ cx('MainTeacher-Header-Button') }>필기 작성 하기</span>
+            <span className={ cx('MainTeacher-Header-Button') } onClick={ this.OnClickWriteBoard }>필기 작성 하기</span>
             <span className={ cx('MainTeacher-Header-Button') } onClick={ this.OnClickLogOut }>로그아웃</span>
             <span className={ cx('MainTeacher-Header-Made') }>Made By 나랏말싸미</span>
           </div>
