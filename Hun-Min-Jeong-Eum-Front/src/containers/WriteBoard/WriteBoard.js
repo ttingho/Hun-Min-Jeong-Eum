@@ -6,8 +6,7 @@ import pen from '../../images/Icon/pen.png';
 import highlight from '../../images/Icon/highlight.png';
 import eraser from '../../images/Icon/eraser.png';
 import save from '../../images/Icon/save.png';
-import bringExample from '../../images/Icon/bringExample.png';
-
+import Canvas from '../Canvas';
 
 class WriteBoard extends Component {
   render () {
@@ -33,19 +32,7 @@ class WriteBoard extends Component {
         </div>
         <div className="WriteBoard-contents">
           <div className="WriteBoard-contents-box">
-            <img className="WriteBoard-contents-box-textbook" src={bringExample} alt=""/>
-            <div className="WriteBoard-contents-box-memo">
-              <pre className="WriteBoard-contents-box-memo-inner">
-                <p>여기서 while은</p>
-                <p>시간을 나타내는</p>
-                <p>접속사로 ~ 할 때</p>
-                <p>라는 의미를 가진다.</p>
-                <br/>
-                <p>heritage의 뜻은</p>
-                <p>세습, 재산, 상속</p>
-                <p>등이 있다.</p>
-              </pre>
-            </div>
+            <Canvas />
           </div>
         </div>
       </div>

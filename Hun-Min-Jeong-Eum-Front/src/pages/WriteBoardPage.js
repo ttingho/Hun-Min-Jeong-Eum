@@ -1,5 +1,5 @@
 import React from 'react';
-import WriteBoard from 'components/WriteBoard/WriteBoard';
+import WriteBoard from 'containers/WriteBoard';
 
 const WriteBoardPage = () => {
   return (
