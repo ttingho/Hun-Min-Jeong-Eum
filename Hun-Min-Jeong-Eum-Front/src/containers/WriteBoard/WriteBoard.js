@@ -61,7 +61,7 @@ class WriteBoard extends Component {
             </IconContext.Provider>
           </div>
           <div className={ cx('WriteBoard-Contents') }>
-            {/* <CanvasDraw
+            <CanvasDraw
               brushRadius={ 5 }
               brushColor={ this.state.colorPick }
               catenaryColor={ this.state.colorPick }
@@ -70,15 +70,15 @@ class WriteBoard extends Component {
               hideGrid={ true }
               imgSrc={ this.state.BackImg }
               ref={canvasDraw => (this.loadableCanvas = canvasDraw)}
-            /> */}
-            <SketchField
+            />
+            {/* <SketchField
               width={ 1900 }
               height={ 850 }
               tool={ Tools.Pencil }
               lineColor={ this.state.colorPick }
               lineWidth={ 5 }
               imageFormat={ this.state.BackImg }
-            />
+            /> */}
           </div>
         </div>
       </Fragment>
